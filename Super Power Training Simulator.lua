@@ -1,4 +1,5 @@
 --Script for Super Power Training Simulator
+local Player = game.Players.LocalPlayer
 local gamepaththing = game.ReplicatedStorage.RemoteEvent
 gamepaththing:FireServer({"Weight", "Weight4"})
 while wait(1)
@@ -14,4 +15,5 @@ do
     gamepaththing:FireServer({"+FS1"})
     wait(1)
     gamepaththing:FireServer({"+PP1"})
+    Player.Character:MoveTo(Vector3.new(x, 300, z))
 end
